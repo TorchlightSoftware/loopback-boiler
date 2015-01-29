@@ -1,0 +1,70 @@
+@import bootstrap-custom
+@import susy
+
+a
+  text-decoration: none
+
+.checklist
+  @extend .table
+  @extend .table-responsive
+  @extend .table-bordered
+  @extend .table-condensed
+  @extend .table-striped
+
+.data-preview
+  background-color: white
+  position: absolute
+  z-index: 5000
+  top: 10px
+  right: 10px
+  padding: 5px
+
+.checklist .btn
+  margin: 4px 10px
+
+.form-inline .form-group
+  margin-right: 10px
+
+.content-pane
+  padding: 20px
+
+.form-group
+  margin-top: 20px
+
+// there is undoubtedly a better way to do this
+.form-group.hz-span
+  width: 100%
+
+.form-group.hz-span .input-group
+  width: 100%
+
+.form-group.hz-span .input-group *
+  width: 100%
+
+.form-controls
+  background-color: white
+  z-index: 5000
+  position: fixed
+  padding: 5px
+  bottom: 0
+
+.form-leaving
+  background-color: rgba(0, 0, 0, 0.8)
+  z-index: 5000
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.form-leaving > div
+  background-color: white
+  width: 500px
+  height: 53px
+  margin: auto
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  padding: 10px

@@ -1,0 +1,11 @@
+heapdump*
+bower_components
+node_modules
+tmp
+public
+*.DS_Store
+*.log
+*.swp
+*.swo
+.strong-pm
+.sass-cache

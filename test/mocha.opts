@@ -1,0 +1,5 @@
+--compilers coffee:coffee-script/register
+-R spec
+-r test/helpers/boiler.coffee
+--ui bdd
+--timeout 2000
