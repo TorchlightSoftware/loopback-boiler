@@ -40,9 +40,9 @@ slc run
 
 ## Develop
 
-For the server side, just add models, and customize with remote methods.
+For the server side, just [add models](http://docs.strongloop.com/display/public/LB/Creating+models), and customize with remote methods.
 
-For the client side, just add routes and views.
+For the client side, just add [routes](https://github.com/rackt/react-router) and [views](http://facebook.github.io/react/docs/component-specs.html).
 
 ## Deploy
 
