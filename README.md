@@ -38,6 +38,12 @@ gulp build &
 slc run
 ```
 
+## Develop
+
+For the server side, just add models, and customize with remote methods.
+
+For the client side, just add routes and views.
+
 ## Deploy
 
 slc deploy http://{server:port}/{config} master
