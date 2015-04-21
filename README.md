@@ -58,7 +58,7 @@ slc deploy http://{server:port}/{config} master
 
 (MIT License)
 
-Copyright (c) 2013 Torchlight Software <info@torchlightsoftware.com>
+Copyright (c) 2014 Torchlight Software <info@torchlightsoftware.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
