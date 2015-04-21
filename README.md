@@ -53,3 +53,7 @@ slc deploy http://{server:port}/{config} master
 [Webdriver API](http://selenium.googlecode.com/git/docs/api/javascript/index.html)
 
 [Webdriver Wiki](https://code.google.com/p/selenium/wiki/WebDriverJs)
+
+## License
+
+MIT
