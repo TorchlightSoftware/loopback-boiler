@@ -65,12 +65,23 @@ module.exports = (server) ->
     assemble: (name, fields) ->
       (cb) => @createRef name, fields, cb
 
-    assembleGroup: (name, records) ->
-      records ?= [{}]
-      (cb) => async.map records, @createRef.bind(@, name), cb
+    assembleGroup: (name, records, shared) ->
+      records or= [{}]
+      if (typeof records) is 'number'
+        records = _.times records, (r) -> {}
+      records = _.map records, (r) -> _.merge {}, shared, r
 
-    createGroup: (name, records, cb) ->
-      @assembleGroup(name, records)(cb)
+      return (cb) =>
+        async.map records, @createRef.bind(@, name), cb
+
+    createGroup: (name, records, shared, done) ->
+      if arguments.length is 3
+        return @createGroup(name, records, null, shared)
+      if (typeof records) is 'number'
+        records = _.times records, (r) -> {}
+      records = _.map records, (r) -> _.merge {}, shared, r
+
+      async.map records, @create.bind(@, name), done
 
     clearAll: (done) ->
 

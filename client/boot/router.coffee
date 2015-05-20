@@ -7,7 +7,7 @@ module.exports = (client) ->
   v = (name) ->
     require 'views/' + name
 
-  routes = Route {name: 'app', path: '/', handler: v('app/nav')}, [
+  routes = Route {name: 'home', path: '/', handler: v('home')}, [
   ]
 
   target = document.getElementById('content')
