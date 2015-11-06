@@ -3,7 +3,6 @@ process.env.NODE_ENV or= 'development'
 _ = require 'lodash'
 loopback = require "loopback"
 boot = require "loopback-boot"
-serveStatic = require "serve-static"
 app = module.exports = loopback()
 app.util = _.merge require("../common/util"), require("./util")
 
@@ -17,12 +16,6 @@ config = require './config'
 # boot scripts mount components like REST API
 boot app, config
 {rel, log} = app.util
-
-# -- Mount static files here--
-# All static middleware should be registered at the end, as all requests
-# passing the static middleware are hitting the file system
-path = require("path")
-app.use serveStatic(path.resolve(__dirname, "../public"))
 
 # Requests that get this far won't be handled
 # by any middleware. Convert them into a 404 error

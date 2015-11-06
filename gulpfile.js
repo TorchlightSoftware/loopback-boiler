@@ -8,11 +8,6 @@ var gulp = require('gulp')
 
 app.util.log.yellow('Gulp - ' + process.env.NODE_ENV);
 
-// this doesn't work at all
-gulp.on('err', function(e) {
-  app.util.log.red(e.err.stack);
-});
-
 scripts.forEach(function(script){
   if (path.extname(script) === '.coffee') {
 

@@ -11,8 +11,7 @@ module.exports = (gulp, app) ->
   gulp.task 'migrate', (done) ->
     mssql.automigrate(done)
 
-  gulp.task 'seed', ['migrate'], (done) ->
-
+  gulp.task 'import', (done) ->
     importCollection = (coll, next, model_name) ->
       createRecord = (data, nextRecord) ->
         #log.yellow 'creating:', {model_name, data}
@@ -24,3 +23,5 @@ module.exports = (gulp, app) ->
       log.white(results) unless err?
       done(err)
       process.exit()
+
+  gulp.task 'seed', gulp.series 'migrate', 'import'
