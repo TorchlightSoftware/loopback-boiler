@@ -1,7 +1,0 @@
-{
-  "remote": {
-    "url": "/api",
-    "name": "remote",
-    "connector": "remote"
-  }
-}
